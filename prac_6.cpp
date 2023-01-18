@@ -1,42 +1,38 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main()
-{
-    //Arrays
-    // string myArr[] = {"Hello" , "World", "Hey", "Hi"};
-    // int marks[] = {22, 12, 14, 20, 15}; // (4 X 5)/4
-    // int numOfElements = sizeof(marks)/sizeof(int);
-    // // myArr[1] = "Wassup";
-    // // cout << myArr[];
+class Student{
+    int id;
+    static int count;
 
-    // for(int i = 0 ; i <= numOfElements; i++){
-    //     cout << myArr[i] << endl;
-    // }
+    public:
+    void setData(){
+        cout << "Enter your college id : " << endl;
+        cin >> id; 
+    }
 
-    // cout << numOfElements;
+    void getData(){
+        cout << "ID of student is : " << id << " and this student count is : " << count << endl;
+    }
+    static void getCount(){
+        cout << "Value of count is : " << count++ << endl;
+    }
 
-    // int myArr[3][4] = {
-    //     {4, 6, 8, 5},
-    //     {11, 33, 55, 77},
-    //     {12, 6, 23, 90}
-    // };
+};
 
-    // for (int i = 0; i < 3; i ++){
-    //     for(int j = 0; j < 4; j++){
-    //         cout << "myArr[" << i << "][" << j << "] = " << myArr[i][j] << endl;
-    //     }
-    // }
+int Student::count;
 
-    // int anotherArr[2][3] = {
+int main(){
 
-    //     {1,2,3},
-    //     {4,5,6}
-    // };
+    Student s1;
+    s1.setData();
+    s1.getData();
+    Student::getCount();
 
-    // for(int i = 0; i < 2; i++){
-    //     for(int j = 0; j < 3; j++){
-    //         cout << "myArr[" << i << "][" << j << "] = " << anotherArr[i][j] << endl;
-    //     }
-    // }
+    Student s2;
+    s2.setData();
+    s2.getData();
+    Student::getCount();
+
+
 }

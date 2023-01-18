@@ -1,27 +1,26 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main()
-{
-    //strings
-    // string myString = "Hello World";
-    //+
-    //indexing starts from 0           [n -1]
-    string firstName = "Hello";
-    string space = " ";
-    string lastName = "World";
-    // string fullName = firstName + space + lastName;
+class Person{
+    public:
+    int age;
 
-    // string a = firstName.append(lastName);
-    // int a = firstName.length();
-    firstName[4] = 'u';
-    cout << firstName <<endl;
+    Person(){
+        cout << "Constructor with no args " << endl;
+    }
 
+    Person(int a){
+        cout << "Constructor with arg : " << a << endl;
+    }
 
-    //Take first name from user
-    //Take last name from user
-    //Print both names (concatination)
+    void display(){
+        cout << "Age is " << age << endl;
+    }
+};
 
-    //Paranthesis exponantial division mul add sub
+int main(){
 
+    Person p1(10);
+
+    Person p2(p1);
 }

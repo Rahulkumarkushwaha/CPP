@@ -1,49 +1,53 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main()
-{
-    //while loop
-    //int i = 0;
+class Binary{
+    string s;
 
-    // int a = 6;
+    public:
+    void read();
+    void checkIfBinary();
+    void convertBinary();
+    void display();
+};
 
-    // while (i <= 100){
-    //     cout << "Value of i is : " << i << endl;
-    //     i += 10;
-    // }
+    //Scope resolution operator
+    void Binary::read(){
+        cout << "Enter a binary number " << endl;
+        cin >> s;
+    }
 
-    // do{
-    //     cout << "Value of i is : " << i << endl;
-    //     i += 1;
-    // } while(i <= 10);
+    void Binary::checkIfBinary(){
+        for(int i = 0; i < s.length(); i++){
+            if(s.at(i) != '0' && s.at(i) != '1'){
+                cout << "Incorrect binary format " << endl;
+                exit(0);
+            }
+        }
+    }
 
-    // for loop //init ; termination ; inc or dec
-    // for(int i = 10; i >= 0; i--){
-    //     cout << i << endl;
+    void Binary::convertBinary(){
+        for(int i = 0; i < s.length(); i++){
+            if(s.at(i) == '0'){
+                s.at(i) = '1';
+            }
+            else{
+                s.at(i) = '0';
+            }
+        }
+    }
 
-    // }
+    void Binary::display(){
+        for(int i = 0; i < s.length(); i++){
+            cout << s.at(i);
+        }
+    }
 
-    // for(int i = 0; i < 2; i++){
-    //     cout << "Outer loop : " << i << endl;
+int main(){
 
-    //     for(int j = 0; j < 3; j++){
-    //         cout << "Inner loop : " << j << endl;
-    //     }
-    // }
-
-    // for (int i = 0; i <= 5; i++){
-    //     if(i == 4){
-    //         //The loop will exit when value of i is 4
-    //         break;
-    //     }
-    //     cout << "Value of i : " << i << endl;
-    // }
-
-    // for(int i = 0; i <=5; i++){
-    //     if(i == 3){
-    //         continue;
-    //     }
-    //     cout << "Value of i  : " << i << endl;
-    // }
+    Binary b;
+    b.read();
+    b.checkIfBinary();
+    b.convertBinary();
+    b.display();
 }

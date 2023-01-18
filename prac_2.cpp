@@ -1,33 +1,43 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
+class Person{
+    int a;
+    int b;
+
+    //Default constructor
+    //Have same name as class
+    //No parameters
+    //no return type
+    public:
+    Person(){
+        cout << "This is output from constructor " << endl;
+    }
+
+    Person(string name){
+        cout << "The name is : " << name << endl;
+    }
+
+    Person(string name, int age){
+        cout << "Name is :" << name << "Age is : " << age << endl;
+    }
+
+    void display(){
+        cout << "this is display function " << endl;
+    }
+
+};
+
+// class Maths{
+//     public:
+//     int add(int a, int b){
+//         return (a + b);
+//     }
+// };
+
 int main(){
-    // string myString = "Hello";
-
-    // cout<<myString;
-
-    //Operators
-    // + Add | - Sub | * Multiply | / Division | % Modulus | ++ Increment | -- Decrement
-    // int a = 5;
-    // a += 10;
-    // a += 15;
-    // int b = 10;
-    // int c = a + b;
-    // cout << a;
-
-    //+=
-
-    //Logiacl operators 
-    //&& - And
-    // || - or
-
-
-    // int num1 = 5;
-    // int num2 = 10;
-
-    // cout << "Sum of two number " << (num1 + num2) << endl;
-    // cout << "Diff of two number " << (num1 - num2) << endl;
-    // cout << "product of two number " << (num1 * num2) << endl;
-
+    Person p1("Hello", 2);
+    //p1.Person()
+    p1.display();
 
 }

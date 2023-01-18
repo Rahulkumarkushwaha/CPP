@@ -1,42 +1,29 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main()
-{
-    int age = 11;
-    //Conditions
-    // if(age > 0 && age < 10){
-    //     cout << "You are a child" << endl;
-    // }
-    // else if(age < 20 && age >= 10){
-    //     cout << "You are a teenager" << endl;
-    // }
-    // else{
-    //     cout << "You are an adult" << endl;
-    // }
+class Person{
 
-    //Ternary operator
-    //string a = (age > 18) ? "You can vote" : "You cannot vote";
+public:
+    int count = 1;
+    Person(){
+        cout << count << endl;
+        // cout << "Constructor is executed" << endl;
+    }
 
-    //cout << a ;
+//Destructors
+    // also have same name as class name beginning with ~
+    // you can only have one destructor
+    // cannot overload destructor
+    //like constructor, it doesnt require any return type and parameter
+    ~Person(){
+        // cout << "Destructor is executed" << endl;
+    }
 
-    //&& || !
+};
 
-    // switch(age){
+int main(){
+    Person p1, p2, p3, p4;
+    // Person *p5 = new Person;
 
-    //     case 1:
-    //         //body of case 1
-    //     cout << "You are a child" << endl;
-
-    //     break;
-
-    //     case 10:
-    //         //body
-    //     cout << "You are not a child" << endl;
-
-    //     break;
-
-    //     default:
-    //     cout << "None of the above" << endl;
-    // }
+    // delete p5;
 }
